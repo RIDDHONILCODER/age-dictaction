@@ -17,7 +17,7 @@ def displayimage(title,image):
         plt.imshow(cv2.cvtColor(image, cv2.COLOR_BGR2RGB))
     plt.title(title)
     plt.axis('off')
-    plt.show()
+    plt.show() 
 
 
     
@@ -73,3 +73,9 @@ while True:
     if choice=="3":
         lapimage=cv2.Laplacian(grayimage,cv2.CV_64F)
         displayimage("laplacian edge dictation ",np.abs(lapimage).astype(np.uint8))
+        # --------------------------------------------------------------
+# Gaussian Smoothing:
+# 1. Prompt the user for a kernel size (odd number).
+# 2. Apply GaussianBlur with the specified kernel.
+# 3. Display the smoothed image, which helps reduce noise.
+# --------------------------------------------------------------
